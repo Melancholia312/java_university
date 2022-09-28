@@ -16,7 +16,7 @@ public class Line {
     }
 
     public String toString() {
-        return String.format("Line from %s to %s", start, end);
+        return String.format("Линия от %s до %s", start, end);
     }
 
 
