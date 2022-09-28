@@ -26,7 +26,7 @@ public class Human {
     }
 
     public String toString() {
-        return String.format("%s, height: %d", name, height);
+        return String.format("%s, рост: %d", name, height);
     }
 
     public void setBatya(Human batya) {
