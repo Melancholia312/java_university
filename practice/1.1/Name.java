@@ -27,6 +27,6 @@ public class Name {
     }
 
     public String toString() {
-        return String.format("%s %s %s", name == null ? "" : name, surname == null ? "" : surname, patronymic == null ? "" : patronymic).trim();
+        return String.format("%s %s %s", name, surname, patronymic).trim();
     }
 }
