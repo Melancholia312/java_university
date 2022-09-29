@@ -13,7 +13,7 @@ public class Employee {
 
     public String toString() {
 
-        if (name.equals(dep.getHead().name)){
+        if (this == dep.getHead()){
             return String.format("%s начальник отдела - %s", name, dep.getName());
         }
         return String.format("%s работает в отделе %s, начальник которого - %s", name, dep.getName(), dep.getHead().name);
