@@ -1,7 +1,7 @@
 public class Name {
-    String name = "";
-    String surname = "";
-    String patronymic = "";
+    String name;
+    String surname;
+    String patronymic;
 
     public Name(String name) {
         this.name = name;
