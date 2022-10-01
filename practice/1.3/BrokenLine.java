@@ -17,10 +17,6 @@ public class BrokenLine {
         this.points.set(index, point);
     }
 
-    public int getPointsCount() {
-        return points.size();
-    }
-
     public String toString() {
         return String.format("Линия: %s", points);
     }
