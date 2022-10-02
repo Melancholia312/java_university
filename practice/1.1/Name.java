@@ -1,7 +1,7 @@
 public class Name {
-    String name;
-    String surname;
-    String patronymic;
+    private String name;
+    private String surname;
+    private String patronymic;
 
     public Name(String name) {
         this(name, "", "");
