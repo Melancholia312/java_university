@@ -12,18 +12,9 @@ public class Name {
     }
 
     public Name(String name, String surname, String patronymic) {
-        if (name == null) {
-            this.name = "";
-        } 
-        if (surname == null) {
-            this.surname = "";
-        } 
-        if (patronymic == null) {
-            this.patronymic = "";
-        } 
-        this.name = name;
-        this.surname = surname;
-        this.patronymic = patronymic;
+        this.name = (name == null) ? "" : name;
+        this.surname = (surname == null) ? "" : surname;
+        this.patronymic = (patronymic == null) ? "" : patronymic;
     }
 
     public String toString() {
