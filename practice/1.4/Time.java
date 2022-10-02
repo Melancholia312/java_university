@@ -7,7 +7,7 @@ public class Time {
     }
 
     public Time(int hours, int minutes, int seconds){
-        this.secs = hours * 3600 + minutes * 60 + seconds;
+        this(hours * 3600 + minutes * 60 + seconds);
     }
 
     public String toString(){
