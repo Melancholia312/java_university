@@ -11,6 +11,7 @@ public class Human {
     public Human(String name, int height, Human batya) {
         this(new Name(name), height, batya);
     }
+    
     public Human(Name name, int height) {
         this(name, height, null);
     }
