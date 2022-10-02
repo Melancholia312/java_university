@@ -7,11 +7,11 @@ public class City {
     private String name;
 
     public City(String name) {
-        this.name = name;
+        this(name, new HashMap<>());
     }
 
     public City(String name, HashMap<City, Integer> ways) {
-        this(name);
+        this.name = name;
         this.ways = ways;
     }
 
