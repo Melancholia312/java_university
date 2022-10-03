@@ -1,32 +1,27 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Student {
 
     private String name;
-    private ArrayList<Integer> marks = new ArrayList<>();
+    private List<Integer> marks;
 
     public Student(String name) {
+        this(name, new ArrayList<>());
+    }
+
+    public Student(String name, Integer ...marks) {
+        this(name, new ArrayList<>(Arrays.asList(marks)));
+    }
+
+    public Student(String name, List<Integer> marks) {
         this.name = name;
+        this.marks = new ArrayList<>(marks);
     }
 
-    public Student(String name, int ...marks) {
-        this(name);
-        for (int mark : marks){
-            this.marks.add(mark);
-        }
-
-    }
-
-    public Student(String name, ArrayList<Integer> marks) {
-        this(name);
-        this.marks = marks;
-
-
-    }
-
-    public ArrayList<Integer> getMarks() {
-        return marks;
+    public List<Integer> getMarks() {
+        return new ArrayList<>(marks);
     }
 
     public void setMark(int index, int mark) {
