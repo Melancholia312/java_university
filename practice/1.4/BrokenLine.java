@@ -14,7 +14,7 @@ public class BrokenLine {
     }
 
     public BrokenLine(ArrayList<Point> points) {
-        this.points = points;
+        this.points = new ArrayList<>(points);
     }
 
     public Point getPoint(int index) {
@@ -25,13 +25,8 @@ public class BrokenLine {
         this.points.set(index, point);
     }
 
-    public int getPointsCount() {
-        return points.size();
-    }
-
     public String toString() {
         return String.format("Линия: %s", points);
     }
-
 
 }
