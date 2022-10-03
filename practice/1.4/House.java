@@ -1,6 +1,6 @@
 public class House {
 
-    final private int stages;
+    final int stages;
 
     public House(int stages) {
         this.stages = stages;
