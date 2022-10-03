@@ -17,15 +17,19 @@ public class Student {
 
     public Student(String name, List<Integer> marks) {
         this.name = name;
-        this.marks = new ArrayList<>(marks);
+        setMarks(marks);
     }
 
-    public List<Integer> getMarks() {
+    public ArrayList<Integer> getMarks() {
         return new ArrayList<>(marks);
     }
 
     public void setMark(int index, int mark) {
         this.marks.set(index, mark);
+    }
+
+    public void setMarks(List<Integer> marks) {
+        this.marks = new ArrayList<>(marks);
     }
 
     public String toString() {
