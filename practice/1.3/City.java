@@ -3,16 +3,16 @@ import java.util.Map;
 
 public class City {
 
-    private HashMap<City, Integer> ways = new HashMap<>();
+    private HashMap<City, Integer> ways;
     private String name;
 
     public City(String name) {
-        this.name = name;
+        this(name, new HashMap<>());
     }
 
     public City(String name, HashMap<City, Integer> ways) {
-        this(name);
-        this.ways = ways;
+        this.name = name;
+        this.ways = new HashMap<>(ways);
     }
 
     public void addOneDirectionWay(City city, int wayValue){
