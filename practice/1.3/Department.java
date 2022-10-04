@@ -1,18 +1,18 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Department {
 
     private String name;
     private Employee head;
-    private ArrayList<Employee> employees = new ArrayList<>();
+    private List<Employee> employees;
+
 
     public Department(String name) {
         this.name = name;
+        this.employees = new ArrayList<>();
     }
 
-    public void setHead(Employee head) {
-        this.head = head;
-    }
 
     public void addEmploy(Employee employee){
         this.employees.add(employee);
@@ -22,15 +22,20 @@ public class Department {
         this.employees.remove(employee);
     }
 
-    public ArrayList<Employee> getEmployees(){
-        return this.employees;
+    public List<Employee> getEmployees(){
+        return new ArrayList<>(employees);
     }
+    
     public Employee getHead() {
         return head;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setHead(Employee head) {
+        this.head = head;
     }
 
 }
