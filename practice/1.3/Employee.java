@@ -1,41 +1,28 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Department {
-
+public class Employee {
     private String name;
-    private Employee head;
-    private List<Employee> employees;
+    private Department dep;
 
-    
-    public Department(String name) {
+    public Employee(String name, Department dep) {
         this.name = name;
-        this.employees = new ArrayList<>();
-    }
-    
-
-    public void addEmploy(Employee employee){
-        this.employees.add(employee);
+        this.dep = dep;
+        dep.addEmploy(this);
     }
 
-    public void removeEmploy(Employee employee){
-        this.employees.remove(employee);
-    }
-    
-    
-    public List<Employee> getEmployees(){
-        return new ArrayList<>(employees);
-    }
-    public Employee getHead() {
-        return head;
+    public Department getDep() {
+        return dep;
     }
 
-    public String getName() {
-        return name;
-    }
-    
-    public void setHead(Employee head) {
-        this.head = head;
+    public void setDep(Department dep) {
+        this.dep.removeEmploy(this);
+        this.dep = dep;
+        dep.addEmploy(this);
     }
 
+    public String toString() {
+
+        if (this == dep.getHead()){
+            return String.format("%s начальник отдела - %s", name, dep.getName());
+        }
+        return String.format("%s работает в отделе %s, начальник которого - %s", name, dep.getName(), (dep.getHead() == null) ? "None" : dep.getHead().name);
+    }
 }
