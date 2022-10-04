@@ -28,6 +28,7 @@ public class BrokenLine {
 
         for (int i = 1; i < points.size(); i ++){
             finalLength += new Line(prevPoint, points.get(i)).length();
+            prevPoint = points.get(i);
         }
 
         return finalLength;
