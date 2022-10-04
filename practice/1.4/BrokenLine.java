@@ -1,19 +1,20 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class BrokenLine {
 
-    private ArrayList<Point> points;
+    private List<Point> points;
 
     public BrokenLine() {
         this(new ArrayList<>());
     }
 
     public BrokenLine(Point ...points) {
-        this(new ArrayList<>(Arrays.asList(points)));
+        this(Arrays.asList(points));
     }
 
-    public BrokenLine(ArrayList<Point> points) {
+    public BrokenLine(List<Point> points) {
         this.points = new ArrayList<>(points);
     }
 
