@@ -7,7 +7,16 @@ public class Point {
         this.y = y;
 
     }
+    
+    public int getY() {
+        return y;
+    }
 
+    public int getX() {
+        return x;
+    }
+
+    
     public String toString() {
         return String.format("{%d;%d}", x, y);
     }
