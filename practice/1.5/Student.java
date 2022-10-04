@@ -12,7 +12,7 @@ public class Student {
     }
 
     public Student(String name, Integer ...marks) {
-        this(name, new ArrayList<>(Arrays.asList(marks)));
+        this(name, Arrays.asList(marks));
     }
 
     public Student(String name, List<Integer> marks) {
