@@ -16,11 +16,14 @@ public class Human {
     }
 
     private void checkBatyaSetPatronymic() {
-        if (this.name.surname == null && !(this.batya.name.surname == null)) {
-            this.name.surname = batya.name.surname;
+        if (this.batya == null){
+            return;
         }
 
-        if (this.name.patronymic == null && !(this.batya.name.name == null)) {
+        if (this.name.surname.isEmpty() && !(this.batya.name.surname.isEmpty())) {
+            this.name.surname = batya.name.surname;
+        }
+        if (this.name.patronymic.isEmpty() && !(this.batya.name.name.isEmpty())) {
             this.name.patronymic = batya.name.name + "ович";
         }
     }
