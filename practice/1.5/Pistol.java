@@ -18,7 +18,7 @@ public class Pistol {
         }
     }
 
-    public int getMaxBullets() {
+    public int getCurBullets() {
         return curBullets;
     }
 
