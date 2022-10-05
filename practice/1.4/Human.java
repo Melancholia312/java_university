@@ -28,11 +28,11 @@ public class Human {
             return;
         }
 
-        if (this.name.surname.isEmpty() && !(this.batya.name.surname.isEmpty())) {
-            this.name.surname = batya.name.surname;
+        if (this.name.getSurname().isEmpty() && !(this.batya.name.getSurname().isEmpty())) {
+            this.name.setSurname(batya.name.getSurname());
         }
-        if (this.name.patronymic.isEmpty() && !(this.batya.name.name.isEmpty())) {
-            this.name.patronymic = batya.name.name + "ович";
+        if (this.name.getPatronymic().isEmpty() && !(this.batya.name.getName().isEmpty())) {
+            this.name.setPatronymic(batya.name.getName() + "ович");
         }
     }
 
