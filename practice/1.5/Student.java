@@ -17,7 +17,7 @@ public class Student {
 
     public Student(String name, List<Integer> marks) {
         this.name = name;
-        setMarks(marks);
+        this.marks = new ArrayList<>(marks);
     }
 
     public double getMarksAverage(){
