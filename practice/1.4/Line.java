@@ -3,8 +3,7 @@ public class Line {
     private Point end;
 
     public Line(Point start, Point end) {
-        this.start = start;
-        this.end = end;
+        this(start.getX(), start.getY(), end.getX(), end.getY());
     }
 
     public Line(int x1, int y1, int x2, int y2) {
