@@ -16,7 +16,7 @@ public class Square {
         return new BrokenLine(startPoint,
                 new Point(startPoint.getX() + sideLength, startPoint.getY()),
                 new Point(startPoint.getX() + sideLength, startPoint.getY() - sideLength),
-                new Point(startPoint.getX() - sideLength, startPoint.getY() - sideLength));
+                new Point(startPoint.getX(), startPoint.getY() - sideLength));
     }
 
     public String toString() {
