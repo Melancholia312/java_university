@@ -16,12 +16,13 @@ public class City {
     }
 
     public void addOneDirectionWay(City city, int wayValue){
+        city.ways.remove(this);
         ways.put(city, wayValue);
     }
 
     public void addTwoDirectionWay(City city, int wayValue){
+        city.ways.put(this, wayValue);
         ways.put(city, wayValue);
-        city.addOneDirectionWay(this, wayValue);
     }
 
     public String toString() {
