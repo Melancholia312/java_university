@@ -30,10 +30,9 @@ public class Employee {
     }
 
     public String toString() {
-
         if (this == dep.getHead()){
-            return String.format("%s nachalnick - %s", name, dep.getName());
+            return String.format("%s начальник отдела - %s", name, dep.getName());
         }
-        return String.format("%s ravotaet v otdele %s, nachalnick - %s", name, dep.getName(), (dep.getHead() == null) ? "None" : dep.getHead().name);
+        return String.format("%s работает в отделе %s, начальник которого - %s", name, dep.getName(), (dep.getHead() == null) ? "None" : dep.getHead().name);
     }
 }
