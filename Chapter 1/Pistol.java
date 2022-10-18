@@ -50,6 +50,9 @@ public class Pistol {
     }
 
     public void setCurBullets(int curBullets) {
+        if (curBullets < 0 ){
+            throw new IllegalArgumentException();
+        }
         this.curBullets = curBullets;
     }
 
