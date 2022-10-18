@@ -12,7 +12,16 @@ public class Pistol extends Weapon {
         if (maxBullets < 0) throw new IllegalArgumentException();
         this.maxBullets = maxBullets;
     }
-
+    
+    @Override
+    public void load(int ammo) {
+        if (ammo() + ammo > maxBullets) {
+            super.load(maxBullets - ammo());
+        } else {
+            super.load(ammo);
+        }
+    }
+    
     public int unload(){
         int bulletsToUnload = ammo();
         for (int i = 0; i < bulletsToUnload; i++){
