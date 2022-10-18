@@ -7,6 +7,9 @@ public class Pistol {
     }
 
     public Pistol(int curBullets, int maxBullets){
+        if (curBullets < 0 || maxBullets < 0){
+            throw new IllegalArgumentException();
+        }
         this.curBullets = curBullets;
         this.maxBullets = maxBullets;
     }
