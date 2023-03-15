@@ -8,8 +8,3 @@ import java.lang.annotation.Target;
 public @interface ToString {
     Status value() default Status.YES;
 }
-
-enum Status {
-    YES,
-    NO
-}
