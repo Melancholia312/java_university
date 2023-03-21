@@ -18,11 +18,12 @@ public class Config {
     }
 
     @Bean
-    @Scope("prototype")
     int random(){
         int min = 0;
         int max = 99;
-        return (int)(Math.random()*(max-min+1)+min);
+        int diff = max - min;
+        Random random = new Random();
+        return random.nextInt(diff + 1);
     }
 
     @Bean
@@ -34,7 +35,6 @@ public class Config {
     @Bean
     @Scope("prototype")
     boolean checkRange(Integer intValue){
-        System.out.println(intValue);
         Predicate<Integer> checkMore = integer -> integer >= 2;
         Predicate<Integer> checkLess = integer -> integer <= 5;
         return checkMore.and(checkLess).test(intValue);
